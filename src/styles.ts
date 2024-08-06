@@ -1,14 +1,13 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  branca: '#eee',
-  preta: '#111',
-  cinza: '#333',
-  verde: '#10AC84',
-  cinzaClaro: '#A3A3A3'
+  branco: '#fff',
+  laranjaClaro: '#FFEBD9',
+  laranjaClarinho: '#FFF8F1',
+  vermelhoSuave: '#E66767'
 }
 
-export const GlobaCSS = createGlobalStyle`
+export const GlobalCSS = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -18,14 +17,21 @@ export const GlobaCSS = createGlobalStyle`
   }
 
   body {
-    padding-top: 40px;
-    background-color: ${cores.preta};
-    color: ${cores.branca}
+    background-color: ${cores.laranjaClarinho};
+    color: ${cores.vermelhoSuave}
+  }
+`
+
+export const Container = styled.div`
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
   }
 
-  .container {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
+  @media (max-width: 480px) {
+    padding 0 10px;
   }
 `
