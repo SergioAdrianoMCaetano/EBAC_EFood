@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom'
+
 import { HeaderBar, LinkItem, Links, LogoImg, LinkCart } from './styles'
 
 import logo from '../../assets/images/logo.png'
+
 import carrinho from '../../assets/images/carrinho.svg'
 
 const Header = () => (
@@ -9,7 +12,7 @@ const Header = () => (
       <nav>
         <Links>
           <LinkItem>
-            <a href="#">Restaurantes</a>
+            <Link to="/">Restaurantes</Link>
           </LinkItem>
         </Links>
       </nav>

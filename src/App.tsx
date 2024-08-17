@@ -1,14 +1,19 @@
-import Header from './components/Header'
-import HeaderImg from './components/HeaderImg'
-import { GlobalCSS, Container } from './styles'
+import { BrowserRouter } from 'react-router-dom'
+
+import { GlobalCSS } from './styles'
+
+import Rotas from './routes'
+
+import Footer from './components/Footer'
 
 function App() {
   return (
     <>
-      <GlobalCSS />
-      <Header />
-      <HeaderImg />
-      <Container></Container>
+      <BrowserRouter>
+        <GlobalCSS />
+        <Rotas />
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

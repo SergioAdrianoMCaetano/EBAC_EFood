@@ -12,6 +12,7 @@ export const ImagemDeHeader = styled.div`
   width: 100vw;
   height: 240px;
   margin-top: 0;
+  margin-bottom: 32px;
 
   @media (max-widht: 375px) {
     margin-top: 0;
