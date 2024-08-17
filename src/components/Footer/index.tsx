@@ -5,13 +5,16 @@ import { FooterContainer, Logo, SocialIcons, FooterText } from './styles'
 import logo from '../../assets/images/logo.png'
 
 import redesSociais from '../../assets/images/imagensRedesSociais.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => (
   <FooterContainer>
     <div className="container">
-      <Logo>
-        <img src={logo} alt="efood logo" />
-      </Logo>
+      <Link to="/">
+        <Logo>
+          <img src={logo} alt="efood logo" />
+        </Logo>
+      </Link>
       <SocialIcons>
         <img src={redesSociais} alt="efood Redes Sociais" />
       </SocialIcons>
