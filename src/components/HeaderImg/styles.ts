@@ -14,7 +14,7 @@ export const ImagemDeHeader = styled.div`
   margin-top: 0;
   margin-bottom: 32px;
 
-  @media (max-widht: 375px) {
+  @media (max-widht: 425px) {
     margin-top: 0;
     padding-top: 0;
   }
@@ -28,7 +28,7 @@ export const Title = styled.h2`
   font-size: 32px;
   font-weight: 900px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     padding-top: 120px;
     padding-left: 8px;
     text-align: center;
@@ -43,7 +43,7 @@ export const TitleH1 = styled.h1`
   font-weight: 100;
   opacity: 0.7;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     padding-left: 40px;
     text-align: left;
     font-size: 28px;

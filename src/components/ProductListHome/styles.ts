@@ -6,7 +6,7 @@ export const ListHome = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     display: flex;
     flex-direction: column;
     align-items: center;

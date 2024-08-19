@@ -26,7 +26,7 @@ export const CardContainer = styled.div`
     right: 10px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     max-width: 75%;
     height: 100%;
     margin-left: 0;
@@ -50,7 +50,7 @@ export const Card = styled.div`
   height: auto;
   align-items: center;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     max-width: 100%;
   }
 `
@@ -60,7 +60,7 @@ export const TituloHome = styled.h3`
   display: block;
   margin-left: 8px;
 
-  @media (max-width: 3775px) {
+  @media (max-width: 425px) {
     font-size: 14px;
     margin-left: 4px;
   }
@@ -72,7 +72,7 @@ export const ImgH2 = styled.div`
   align-items: center;
   margin-left: 4px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     margin-left: 0;
   }
 `
@@ -91,7 +91,7 @@ export const Descricao = styled.p`
   margin-right: 8px;
   margin-bottom: 16px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     padding-top: 8px;
     margin-left: 4px;
     margin-bottom: 24px;

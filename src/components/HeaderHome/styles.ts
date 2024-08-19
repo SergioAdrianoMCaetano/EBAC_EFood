@@ -10,7 +10,7 @@ export const HeaderBar = styled.div`
   height: max;
   margin-bottom: 80px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     flex-direction: column;
     padding: 16px;
   }
@@ -22,7 +22,7 @@ export const LogoImg = styled.img`
   margin-top: 64px;
   align-items: center;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     margin-bottom: 16px;
     margin-left: 112px;
   }
@@ -44,7 +44,7 @@ export const TituloHome = styled.h2`
   margin-left: auto;
   margin-right: auto;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     font-size: 16px;
     text-align: center;
     margin-left: auto;

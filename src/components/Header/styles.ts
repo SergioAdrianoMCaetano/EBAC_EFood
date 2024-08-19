@@ -18,7 +18,7 @@ export const HeaderBar = styled.div`
     font-weight: bold;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     flex-direction: column;
     padding: 16px;
   }
@@ -28,7 +28,7 @@ export const Links = styled.div`
   display: flex;
   margin-left: 40px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     margin-left: 0;
     margin-bottom: 16px;
   }
@@ -38,7 +38,7 @@ export const LinkItem = styled.li`
   margin-right: 16px;
   text-align: left;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     margin-right: 8px;
   }
 `
@@ -47,7 +47,7 @@ export const LogoImg = styled.img`
   justify-content: center;
   margin-bottom: 40px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     margin-bottom: 16px;
   }
 `
@@ -62,7 +62,7 @@ export const LinkCart = styled.a`
     margin-left: 16px;
   }
 
-  @ media (max-width: 375px) {
+  @ media (max-width: 425px) {
     img {
       margin-left: 8px;
     }

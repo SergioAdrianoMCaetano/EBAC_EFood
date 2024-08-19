@@ -9,7 +9,7 @@ export const List = styled.ul`
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 32px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     display: flex;
     flex-direction: column;
     align-items: center;
