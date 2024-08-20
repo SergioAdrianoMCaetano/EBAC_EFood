@@ -7,7 +7,6 @@ export const HeaderBar = styled.div`
   background-size: cover;
   background-position: center;
   padding: 24px;
-  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;

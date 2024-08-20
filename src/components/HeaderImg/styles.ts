@@ -7,11 +7,11 @@ import { cores } from '../../styles'
 export const ImagemDeHeader = styled.div`
   background-image: url(${imagemFundo});
   background-repeat: no-repeat;
-  background-size: cover
+  background-size: 100% auto;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   height: 240px;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: left;
