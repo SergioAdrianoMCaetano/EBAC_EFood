@@ -37,4 +37,5 @@ export const FooterText = styled.p`
   padding-bottom: 32px;
   font-size: 14px;
   color: ${cores.vermelhoSuave};
+  text-align: center;
 `

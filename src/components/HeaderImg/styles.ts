@@ -11,6 +11,10 @@ export const ImagemDeHeader = styled.div`
   background-position: center;
   width: 100vw;
   height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
   margin-top: 0;
   margin-bottom: 32px;
 

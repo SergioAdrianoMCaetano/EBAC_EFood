@@ -7,8 +7,11 @@ export const Card = styled.div`
   padding: 8px;
   margin-bottom: 32px;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   align-items: center;
+  text-align: center;
 
   ${TagContainer} {
     margin-right: 8px;

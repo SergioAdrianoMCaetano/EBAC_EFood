@@ -55,6 +55,7 @@ export const LogoImg = styled.img`
 export const LinkCart = styled.a`
   color: ${cores.vermelhoSuave};
   display: flex;
+  align-items: center;
   text-align: center;
 
   img {

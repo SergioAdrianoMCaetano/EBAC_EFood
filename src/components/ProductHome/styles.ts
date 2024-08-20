@@ -5,7 +5,7 @@ export const CardContainer = styled.div`
   background-color: ${cores.branco};
   width: 474px;
   height: 394px;
-  margin-left: 164px;
+  margin-left: 8px;
   margin-bottom: 48px;
   border: solid 1px ${cores.vermelhoSuave};
   position: relative;

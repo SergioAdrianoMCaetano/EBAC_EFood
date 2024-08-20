@@ -9,22 +9,23 @@ export const HeaderBar = styled.div`
   border-radius: 16px;
   height: max;
   margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 425px) {
-    flex-direction: column;
     padding: 16px;
   }
 `
 
 export const LogoImg = styled.img`
-  display: flex;
-  margin-left: 600px;
   margin-top: 64px;
   align-items: center;
 
   @media (max-width: 425px) {
     margin-bottom: 16px;
-    margin-left: 112px;
+    margin-top: 0;
   }
 `
 
@@ -36,18 +37,14 @@ export const TituloContainer = styled.div`
 `
 
 export const TituloHome = styled.h2`
-  display: block;
   font-size: 36px;
   font-weight: 900;
   text-align: center;
   margin-top: 64px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media (max-width: 425px) {
     font-size: 16px;
     text-align: center;
-    margin-left: auto;
     margin-top: 36px;
   }
 `

@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export const ProductContainer = styled.section`
   padding: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const List = styled.ul`
