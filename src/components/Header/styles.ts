@@ -25,7 +25,7 @@ export const HeaderBar = styled.div`
 
 export const Links = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-left: 0;
 
   @media (max-width: 425px) {
@@ -45,6 +45,7 @@ export const LogoImg = styled.img`
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  margin-left: 324px;
 
   @media (max-width: 425px) {
     margin-bottom: 16px;
@@ -57,7 +58,7 @@ export const LinkCart = styled.a`
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-left: 8px;
+  margin-left: 324px;
 
   img {
     background-color: ${cores.vermelhoSuave};
