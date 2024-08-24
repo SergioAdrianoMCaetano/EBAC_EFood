@@ -29,7 +29,7 @@ export const Title = styled.h2`
   color: ${cores.branco};
   font-size: 32px;
   font-weight: 900px;
-  margin-left: 324px;
+  margin-left: 170px;
   margin-top: 100px;
 
   @media (max-width: 425px) {
@@ -42,7 +42,7 @@ export const TitleH1 = styled.h1`
   color: ${cores.branco};
   font-size: 32px;
   font-weight: 100;
-  margin-left: 324px;
+  margin-left: 170px;
   margin-bottom: 40px;
   opacity: 0.7;
 
