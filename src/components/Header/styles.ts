@@ -9,7 +9,7 @@ export const HeaderBar = styled.div`
   padding: 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   a {
     color: ${cores.vermelhoSuave};
@@ -25,10 +25,10 @@ export const HeaderBar = styled.div`
 
 export const Links = styled.div`
   display: flex;
-  margin-left: 40px;
+  justify-content: center;
+  margin-left: 0;
 
   @media (max-width: 425px) {
-    margin-left: 0;
     margin-bottom: 16px;
   }
 `
@@ -55,7 +55,9 @@ export const LinkCart = styled.a`
   color: ${cores.vermelhoSuave};
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  margin-left: 8px;
 
   img {
     background-color: ${cores.vermelhoSuave};

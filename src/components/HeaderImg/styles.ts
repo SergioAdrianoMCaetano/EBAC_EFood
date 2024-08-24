@@ -11,10 +11,10 @@ export const ImagemDeHeader = styled.div`
   background-position: center;
   width: 100%;
   height: 240px;
-  display: block;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   margin-top: 0;
   margin-bottom: 32px;
 
@@ -25,31 +25,25 @@ export const ImagemDeHeader = styled.div`
 `
 
 export const Title = styled.h2`
-  padding-top: 140px;
-  padding-left: 160px;
-  text-align: start;
+  text-align: center;
   color: ${cores.branco};
   font-size: 32px;
   font-weight: 900px;
 
   @media (max-width: 425px) {
-    padding-top: 120px;
-    padding-left: 8px;
     text-align: center;
     font-size: 28px;
   }
 `
 export const TitleH1 = styled.h1`
-  padding-top: 20px;
-  padding-left: 160px;
+  text-aling: center;
   color: ${cores.branco};
   font-size: 32px;
   font-weight: 100;
   opacity: 0.7;
 
   @media (max-width: 425px) {
-    padding-left: 40px;
-    text-align: left;
+    text-align: center;
     font-size: 28px;
   }
 `
