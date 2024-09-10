@@ -37,6 +37,7 @@ export const TituloContainer = styled.div`
 `
 
 export const TituloHome = styled.h2`
+  color: #e66767;
   font-size: 36px;
   font-weight: 900;
   text-align: center;

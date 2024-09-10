@@ -33,7 +33,7 @@ const ProductHome = ({ title, description, infos, image }: Props) => (
       <ImgH2>
         <TituloHome>{title}</TituloHome>
         <ImgStar>
-          <TituloHome>10.0</TituloHome>
+          <TituloHome>4.6</TituloHome>
           <img src={estrela} />
         </ImgStar>
       </ImgH2>

@@ -10,11 +10,17 @@ export const HeaderBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   a {
     color: ${cores.vermelhoSuave};
     text-decoration: none;
     font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
   }
 
   @media (max-width: 425px) {
@@ -28,8 +34,14 @@ export const Links = styled.div`
   justify-content: space-between;
   margin-left: 0;
 
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
   @media (max-width: 425px) {
     margin-bottom: 16px;
+    justify-content: center;
   }
 `
 
@@ -37,18 +49,29 @@ export const LinkItem = styled.li`
   margin-right: 16px;
   text-align: left;
 
+  @media (max-width: 768px) {
+    margin-right: 12px;
+  }
+
   @media (max-width: 425px) {
     margin-right: 8px;
   }
 `
+
 export const LogoImg = styled.img`
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
   margin-left: 324px;
 
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+    margin-left: 0;
+  }
+
   @media (max-width: 425px) {
     margin-bottom: 16px;
+    margin-left: 0;
   }
 `
 
@@ -61,11 +84,21 @@ export const LinkCart = styled.a`
   margin-left: 324px;
 
   img {
-    background-color: ${cores.vermelhoSuave};
+    // background-color: ${cores.vermelhoSuave};
     margin-left: 16px;
   }
 
-  @ media (max-width: 425px) {
+  @media (max-width: 768px) {
+    margin-left: 0;
+
+    img {
+      margin-left: 12px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    margin-left: 0;
+
     img {
       margin-left: 8px;
     }

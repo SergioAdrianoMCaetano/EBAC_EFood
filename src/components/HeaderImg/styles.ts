@@ -7,47 +7,88 @@ import { cores } from '../../styles'
 export const ImagemDeHeader = styled.div`
   background-image: url(${imagemFundo});
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   width: 100%;
   height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: start;
+  text-align: left;
   margin-top: 0;
   margin-bottom: 32px;
+  margion-left: 0;
 
-  @media (max-widht: 425px) {
-    margin-top: 0;
+  .container {
+    margin-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    height: 200px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 425px) {
+    height: 160px;
+    margin-bottom: 16px;
     padding-top: 0;
   }
 `
 
 export const Title = styled.h2`
-  text-align: start;
+  display: flex;
+  justify-content: left;
+  text-align: center;
   color: ${cores.branco};
   font-size: 32px;
-  font-weight: 900px;
-  margin-left: 170px;
-  margin-top: 100px;
+  font-weight: 900;
+  margin-top: 80px;
+  margin-left: 160px;
+
+  @media (width: 2560px) {
+    margin-left: 764px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    margin-left: 16px;
+    margin-top: 80px;
+  }
 
   @media (max-width: 425px) {
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
+    margin-left: 16px;
+    margin-top: 60px;
   }
 `
+
 export const TitleH1 = styled.h1`
-  text-aling: center;
+  display: flex;
+  justify-content: left;
+  text-align: left;
   color: ${cores.branco};
   font-size: 32px;
   font-weight: 100;
-  margin-left: 170px;
+  margin-left: 160px;
   margin-bottom: 40px;
   opacity: 0.7;
 
+  @media (width: 2560px) {
+    margin-left: 764px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    margin-left: 16px;
+    margin-bottom: 30px;
+  }
+
   @media (max-width: 425px) {
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
+    margin-left: 16px;
+    margin-bottom: 20px;
   }
 `

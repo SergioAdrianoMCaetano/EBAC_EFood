@@ -9,20 +9,22 @@ import HeaderImg from '../HeaderImg'
 
 const Header = () => (
   <>
-    <HeaderBar>
-      <nav>
-        <Links>
-          <LinkItem>
-            <Link to="/">Restaurantes</Link>
-          </LinkItem>
-        </Links>
-      </nav>
-      <LogoImg src={logo} alt="eFood" />
-      <LinkCart href="#">
-        0 - produto(s)
-        <img src={carrinho} alt="Carrinho" />
-      </LinkCart>
-    </HeaderBar>
+    <div className="container">
+      <HeaderBar>
+        <nav>
+          <Links>
+            <LinkItem>
+              <Link to="/">Restaurantes</Link>
+            </LinkItem>
+          </Links>
+        </nav>
+        <LogoImg src={logo} alt="eFood" />
+        <LinkCart href="#">
+          0 - produto(s)
+          <img src={carrinho} alt="Carrinho" />
+        </LinkCart>
+      </HeaderBar>
+    </div>
   </>
 )
 

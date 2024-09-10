@@ -44,6 +44,7 @@ export const CardContainer = styled.div`
 `
 
 export const Card = styled.div`
+  color: ${cores.vermelhoSuave};
   margin-top: 10px;
   width: 100%;
   max-width: 472px;
@@ -84,6 +85,7 @@ export const ImgStar = styled.div`
 `
 
 export const Descricao = styled.p`
+  color: ${cores.vermelhoSuave};
   font-size: 16px;
   padding-top: 12px;
   padding-bottom: 4px;

@@ -18,7 +18,7 @@ const ButtonHome = ({ type, title, to, onClick, children }: Props) => {
   }
 
   return (
-    <ButtonLinkHome to={to as string} title={title}>
+    <ButtonLinkHome to={'/categorias'} title={title}>
       {children}
     </ButtonLinkHome>
   )

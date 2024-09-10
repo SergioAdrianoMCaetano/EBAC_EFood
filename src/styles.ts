@@ -19,6 +19,7 @@ export const GlobalCSS = createGlobalStyle`
   body {
     background-color: ${cores.laranjaClarinho};
     color: ${cores.vermelhoSuave}
+    min-height: 100vh; 
   }
 `
 

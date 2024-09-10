@@ -8,7 +8,7 @@ import Food from '../../models/Food'
 const categorias: Food[] = [
   {
     id: 1,
-    category: 'Japonesa',
+    category: 'Serve: de 2 a 3 pessoas',
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
@@ -17,7 +17,7 @@ const categorias: Food[] = [
   },
   {
     id: 2,
-    category: 'Japonesa',
+    category: 'Italiana',
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
@@ -26,7 +26,7 @@ const categorias: Food[] = [
   },
   {
     id: 3,
-    category: 'Japonesa',
+    category: 'Italiana',
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
@@ -35,7 +35,7 @@ const categorias: Food[] = [
   },
   {
     id: 4,
-    category: 'Japonesa',
+    category: 'Italiana',
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
@@ -44,7 +44,7 @@ const categorias: Food[] = [
   },
   {
     id: 5,
-    category: 'Japonesa',
+    category: 'Italiana',
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
@@ -53,7 +53,7 @@ const categorias: Food[] = [
   },
   {
     id: 6,
-    category: 'Japonesa',
+    category: 'Italiana',
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',

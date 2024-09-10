@@ -29,5 +29,6 @@ export const ButtonLinkHome = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   font-size: 16px;
+  font-weight: 700px;
   padding: 8px;
 `
