@@ -18,9 +18,10 @@ export const List = styled.ul`
     align-items: center;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     display: flex;
     flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: center;
   }
 `

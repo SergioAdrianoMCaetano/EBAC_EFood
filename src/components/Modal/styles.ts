@@ -34,6 +34,13 @@ export const ModalContent = styled.div`
     height: auto;
     padding: 16px;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin-right: 8px;
+    padding: 10px;
+  }
 `
 
 export const CloseButton = styled.button`

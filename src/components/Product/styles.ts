@@ -42,7 +42,7 @@ export const Card = styled.div`
 
   img {
     position: relative;
-    padding-top: 2px;
+    padding: 8px;
   }
 
   ${TagContainer} {
@@ -53,7 +53,7 @@ export const Card = styled.div`
     margin: 8px;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     width: 100%;
     height: auto;
     padding: 2px;
@@ -85,7 +85,7 @@ export const Titulo = styled.h3`
   margin-bottom: 8px;
   color: ${cores.laranjaClaro};
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     font-size: 14px;
     margin-left: 4px;
     margin-top: 4px;
@@ -101,7 +101,7 @@ export const Descricao = styled.p`
   line-height: 22px;
   margin-bottom: 8px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     font-size: 12px;
     margin-left: 4px;
     margin-bottom: 4px;
@@ -113,7 +113,7 @@ export const Infos = styled.div`
   top: 16px;
   right: 16px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     top: 8px;
     right: 8px;
   }
@@ -129,14 +129,15 @@ export const Button = styled.button`
   font-size: 14px;
   text-align: center;
   border: 0;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
 
-  @media (max-width: 425px) {
-    width: 100%;
-    height: auto;
+  @media (max-width: 435px) {
+    width: 75%;
+    height: 24px;
     font-size: 12px;
     margin-top: 10px;
+    margin-bottom: 8px;
   }
 `
 
@@ -147,7 +148,7 @@ export const ModelContent = styled.div`
   flex-direction: row;
   gap: 32px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     flex-direction: column;
     gap: 16px;
   }
@@ -157,7 +158,7 @@ export const ModalHeader = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     flex-direction: column;
   }
 `
@@ -201,8 +202,9 @@ export const ModalImagem = styled.img`
   border-radius: 8px;
   margin: 32px;
   object-fit: cover;
+  padding-top: 8px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     width: 100%;
     height: auto;
     margin: 16px;
@@ -210,7 +212,7 @@ export const ModalImagem = styled.img`
 `
 
 export const ModalButton = styled.button`
-  width: 218px;
+  width: 50%;
   height: 24px;
   margin-top: 20px;
   background-color: ${cores.laranjaClarinho};
@@ -222,11 +224,11 @@ export const ModalButton = styled.button`
   border-radius: 2px;
   cursor: pointer;
 
-  @media (max-width: 425px) {
-    width: 100%;
-    height: auto;
+  @media (max-width: 435px) {
+    width: 75%;
+    height: 24px;
     font-size: 12px;
-    margin-top: 10px;
+    padding: 4px;
   }
 `
 
