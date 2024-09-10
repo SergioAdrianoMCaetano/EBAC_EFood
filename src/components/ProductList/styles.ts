@@ -15,6 +15,7 @@ export const List = styled.ul`
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
+    align-items: center;
   }
 
   @media (max-width: 425px) {

@@ -1,6 +1,5 @@
 import { Card, Descricao, Titulo, Button } from './styles'
 
-import fechar from '../../assets/images/fechar.png'
 import { useState } from 'react'
 import Modal from '../Modal'
 

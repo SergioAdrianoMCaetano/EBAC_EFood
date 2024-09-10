@@ -28,6 +28,12 @@ export const ModalContent = styled.div`
   img {
     align-items: left;
   }
+
+  @media (max-width: 425px) {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
 `
 
 export const CloseButton = styled.button`
@@ -38,4 +44,10 @@ export const CloseButton = styled.button`
   border: none;
   font-size: 20px;
   cursor: pointer;
+
+  @media (max-width: 425px) {
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+  }
 `

@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
-import BotaoAdicionarCarrinho from '../Button'
-
 export const Card = styled.div`
   padding: 4px;
   width: 320px;
@@ -32,14 +30,9 @@ export const Card = styled.div`
 
   .zoom-icon {
     position: absolute;
-    // transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.3 ease-in-out;
   }
-
-  // &:hover .main-image {
-  //   transform: scale(0.9);
-  // }
 
   &:hover .zoom-icon {
     opacity: 0.5;
@@ -59,7 +52,29 @@ export const Card = styled.div`
   .container {
     margin: 8px;
   }
+
+  @media (max-width: 425px) {
+    width: 100%;
+    height: auto;
+    padding: 2px;
+
+    .image-container {
+      width: 100%;
+      height: auto;
+
+      .main-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .zoom-icon {
+      width: 100%;
+      height: auto;
+    }
+  }
 `
+
 export const Titulo = styled.h3`
   font-size: 16px;
   font-weight: bold;
@@ -69,7 +84,15 @@ export const Titulo = styled.h3`
   margin-top: 8px;
   margin-bottom: 8px;
   color: ${cores.laranjaClaro};
+
+  @media (max-width: 425px) {
+    font-size: 14px;
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 `
+
 export const Descricao = styled.p`
   color: ${cores.laranjaClaro};
   font-size: 14px;
@@ -77,11 +100,23 @@ export const Descricao = styled.p`
   margin-left: 8px;
   line-height: 22px;
   margin-bottom: 8px;
+
+  @media (max-width: 425px) {
+    font-size: 12px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+  }
 `
+
 export const Infos = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
+
+  @media (max-width: 425px) {
+    top: 8px;
+    right: 8px;
+  }
 `
 
 export const Button = styled.button`
@@ -96,6 +131,13 @@ export const Button = styled.button`
   border: 0;
   border-radius: 2px;
   cursor: pointer;
+
+  @media (max-width: 425px) {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    margin-top: 10px;
+  }
 `
 
 export const ModelContent = styled.div`
@@ -104,29 +146,53 @@ export const ModelContent = styled.div`
   align-items: center;
   flex-direction: row;
   gap: 32px;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    gap: 16px;
+  }
 `
 
 export const ModalHeader = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `
 
 export const ModalTitle = styled.h4`
   font-size: 18px;
   color: ${cores.branco};
   margin-bottom: 24px;
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
 `
 
 export const ModalDescription = styled.p`
   font-size: 14px;
   color: ${cores.branco};
   margin-right: 32px;
+
+  @media (max-width: 425px) {
+    font-size: 12px;
+    margin-right: 16px;
+  }
 `
 
 export const ModalService = styled.p`
   margin-top: 32px;
   font-size: 14px;
   color: ${cores.branco};
+
+  @media (max-width: 425px) {
+    font-size: 12px;
+    margin-top: 16px;
+  }
 `
 
 export const ModalImagem = styled.img`
@@ -135,7 +201,14 @@ export const ModalImagem = styled.img`
   border-radius: 8px;
   margin: 32px;
   object-fit: cover;
+
+  @media (max-width: 425px) {
+    width: 100%;
+    height: auto;
+    margin: 16px;
+  }
 `
+
 export const ModalButton = styled.button`
   width: 218px;
   height: 24px;
@@ -148,6 +221,13 @@ export const ModalButton = styled.button`
   border: 0;
   border-radius: 2px;
   cursor: pointer;
+
+  @media (max-width: 425px) {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    margin-top: 10px;
+  }
 `
 
 // export const Action = styled.div`
