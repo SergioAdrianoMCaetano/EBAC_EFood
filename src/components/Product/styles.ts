@@ -28,18 +28,6 @@ export const Card = styled.div`
     }
   }
 
-  .zoom-icon {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.3 ease-in-out;
-  }
-
-  &:hover .zoom-icon {
-    opacity: 0.5;
-    transform: scale(0.9);
-    transition: opacity 0.3 ease-in-out;
-  }
-
   img {
     position: relative;
     padding: 8px;
@@ -63,6 +51,7 @@ export const Card = styled.div`
       height: auto;
 
       .main-image {
+        margin-left: 0;
         width: 100%;
         height: auto;
       }
@@ -103,6 +92,7 @@ export const Descricao = styled.p`
 
   @media (max-width: 435px) {
     font-size: 12px;
+    text-align: left;
     margin-left: 4px;
     margin-bottom: 4px;
   }
@@ -122,7 +112,8 @@ export const Infos = styled.div`
 export const Button = styled.button`
   width: 304px;
   height: 24px;
-  margin-top: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   background-color: ${cores.laranjaClarinho};
   color: ${cores.vermelhoSuave};
   font-weight: bold;
@@ -133,7 +124,7 @@ export const Button = styled.button`
   cursor: pointer;
 
   @media (max-width: 435px) {
-    width: 75%;
+    width: 98%;
     height: 24px;
     font-size: 12px;
     margin-top: 10px;
