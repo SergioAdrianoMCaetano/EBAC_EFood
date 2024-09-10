@@ -216,7 +216,7 @@ export const ModalButton = styled.button`
   cursor: pointer;
 
   @media (max-width: 435px) {
-    width: 75%;
+    width: 98%;
     height: 24px;
     font-size: 12px;
     padding: 4px;
