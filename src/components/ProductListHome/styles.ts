@@ -7,6 +7,13 @@ export const ContainerHome = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 435px) {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
 `
 
 export const ListHome = styled.ul`
@@ -14,9 +21,10 @@ export const ListHome = styled.ul`
   grid-template-columns: 1fr 1fr;
   column-gap: 80px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     display: flex;
     flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: center;
   }
 `

@@ -10,7 +10,7 @@ export type Props = {
 const ProductListHome = ({ foods }: Props) => {
   const getDescricao = (describe: string) => {
     if (describe.length > 293) {
-      return describe.slice(0, 290) + '...'
+      return describe.slice(0, 275) + '...'
     }
     return describe
   }

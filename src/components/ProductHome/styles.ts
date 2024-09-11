@@ -54,8 +54,9 @@ export const Card = styled.div`
   height: auto;
   align-items: center;
 
-  @media (max-width: 425px) {
-    max-width: 100%;
+  @media (max-width: 435px) {
+    margin: 8px;
+    width: 100%;
   }
 `
 
