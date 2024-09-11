@@ -16,11 +16,17 @@ export type Props = {
   title: string
   category: string
   description: string
-  infos: string[]
   image: string
 }
 
-const Product = ({ title, category, description, infos, image }: Props) => {
+const Product = ({ title, category, description, image }: Props) => {
+  const getDescricao = (describe: string) => {
+    if (describe.length > 293) {
+      return describe.slice(0, 290) + '...'
+    }
+    return describe
+  }
+
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleOpenModal = () => {
@@ -39,7 +45,7 @@ const Product = ({ title, category, description, infos, image }: Props) => {
         </div>
         <div>
           <Titulo>{title}</Titulo>
-          <Descricao>{description}</Descricao>
+          <Descricao>{getDescricao(description)}</Descricao>
         </div>
         <Button onClick={handleOpenModal}>Mais detalhes</Button>
       </Card>

@@ -1,71 +1,43 @@
 import HeaderHome from '../../components/HeaderHome'
 import ProductListHome from '../../components/ProductListHome'
-import Food from '../../models/Food'
 
-import hiokiSushi from '../../assets/images/pratoSushi.png'
+import { useEffect, useState } from 'react'
 
-const destaquesDaSemana: Food[] = [
-  {
-    id: 1,
-    category: 'Japonesa',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'Hioki Sushi',
-    infos: ['Destaque da semana', 'Japonesa'],
-    image: hiokiSushi
-  },
-  {
-    id: 2,
-    category: 'Japonesa',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'Hioki Sushi',
-    infos: ['Japonesa'],
-    image: hiokiSushi
-  },
-  {
-    id: 3,
-    category: 'Japonesa',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'Hioki Sushi',
-    infos: ['Japonesa'],
-    image: hiokiSushi
-  },
-  {
-    id: 4,
-    category: 'Japonesa',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'Hioki Sushi',
-    infos: ['Japonesa'],
-    image: hiokiSushi
-  },
-  {
-    id: 5,
-    category: 'Japonesa',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'Hioki Sushi',
-    infos: ['Japonesa'],
-    image: hiokiSushi
-  },
-  {
-    id: 6,
-    category: 'Japonesa',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'Hioki Sushi',
-    infos: ['Japonesa'],
-    image: hiokiSushi
-  }
-]
+export type Food = {
+  id: number
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: number
+  descricao: string
+  capa: string
+  infos: string
+  cardapio: {
+    foto: string
+    preco: number
+    id: number
+    nome: string
+    descricao2: string
+    porcao: string
+  }[]
+}
 
-const Home = () => (
-  <>
-    <HeaderHome />
-    <ProductListHome foods={destaquesDaSemana} />
-  </>
-)
+const Home = () => {
+  const [destaquesDaSemana, setDestaquesDaSemana] = useState<Food[]>([])
+
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setDestaquesDaSemana(res))
+      .catch((error) => console.error('Erro ao buscar os dados', error))
+  })
+
+  return (
+    <>
+      <HeaderHome />
+      <ProductListHome foods={destaquesDaSemana} />
+    </>
+  )
+}
 
 export default Home

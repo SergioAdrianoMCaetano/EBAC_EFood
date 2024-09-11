@@ -4,7 +4,7 @@ import { cores } from '../../styles'
 export const CardContainer = styled.div`
   background-color: ${cores.branco};
   width: 474px;
-  height: 394px;
+  height: 420px;
   margin-left: 8px;
   margin-bottom: 48px;
   border: solid 1px ${cores.vermelhoSuave};
@@ -16,7 +16,10 @@ export const CardContainer = styled.div`
     width: 100%;
 
     img {
-      max-width: 100%;
+      display: block;
+      width: 472px;
+      height: 218px;
+      object-fit: cover;
     }
   }
 

@@ -3,62 +3,80 @@ import HeaderImg from '../../components/HeaderImg'
 import ProductList from '../../components/ProductList'
 
 import pratoPizza from '../../assets/images/pratoPizza.png'
-import Food from '../../models/Food'
+import { Food } from '../Home'
 
 const categorias: Food[] = [
   {
     id: 1,
-    category: 'Serve: de 2 a 3 pessoas',
-    description:
+    descricao:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-    infos: ['Italiana'],
-    image: pratoPizza
+    titulo: 'Pizza Marguerita',
+    capa: pratoPizza,
+    destacado: false,
+    tipo: '',
+    avaliacao: 0,
+    infos: '',
+    cardapio: []
   },
   {
     id: 2,
-    category: 'Italiana',
-    description:
+    descricao:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-    infos: ['Italiana'],
-    image: pratoPizza
+    titulo: 'Pizza Marguerita',
+    capa: pratoPizza,
+    destacado: false,
+    tipo: '',
+    avaliacao: 0,
+    infos: '',
+    cardapio: []
   },
   {
     id: 3,
-    category: 'Italiana',
-    description:
+    descricao:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-    infos: ['Italiana'],
-    image: pratoPizza
+    titulo: 'Pizza Marguerita',
+    capa: pratoPizza,
+    destacado: false,
+    tipo: '',
+    avaliacao: 0,
+    infos: '',
+    cardapio: []
   },
   {
     id: 4,
-    category: 'Italiana',
-    description:
+    descricao:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-    infos: ['Italiana'],
-    image: pratoPizza
+    titulo: 'Pizza Marguerita',
+    capa: pratoPizza,
+    destacado: false,
+    tipo: '',
+    avaliacao: 0,
+    infos: '',
+    cardapio: []
   },
   {
     id: 5,
-    category: 'Italiana',
-    description:
+    descricao:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-    infos: ['Italiana'],
-    image: pratoPizza
+    titulo: 'Pizza Marguerita',
+    capa: pratoPizza,
+    destacado: false,
+    tipo: '',
+    avaliacao: 0,
+    infos: '',
+    cardapio: []
   },
   {
     id: 6,
-    category: 'Italiana',
-    description:
+    descricao:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-    infos: ['Italiana'],
-    image: pratoPizza
+    titulo: 'Pizza Marguerita',
+    capa: pratoPizza,
+    destacado: false,
+    tipo: '',
+    avaliacao: 0,
+    infos: '',
+    cardapio: []
   }
 ]
 
