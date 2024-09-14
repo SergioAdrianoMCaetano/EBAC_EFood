@@ -4,8 +4,9 @@ import ProductList from '../../components/ProductList'
 
 import pratoPizza from '../../assets/images/pratoPizza.png'
 import { Food } from '../Home'
+import { Categoria } from '../../types'
 
-const categorias: Food[] = [
+const categorias: Categoria[] = [
   {
     id: 1,
     descricao:
@@ -80,7 +81,7 @@ const categorias: Food[] = [
   }
 ]
 
-const Categories = () => (
+const Categorias = () => (
   <>
     <Header />
     <HeaderImg />
@@ -88,4 +89,4 @@ const Categories = () => (
   </>
 )
 
-export default Categories
+export default Categorias

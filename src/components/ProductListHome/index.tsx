@@ -24,6 +24,7 @@ const ProductListHome = ({ foods }: Props) => {
             description={getDescricao(food.descricao)}
             image={food.capa}
             infos={[]}
+            id={food.id}
           />
         ))}
       </ListHome>

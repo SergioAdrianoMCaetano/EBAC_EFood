@@ -5,7 +5,6 @@ import { HeaderBar, LinkItem, Links, LogoImg, LinkCart } from './styles'
 import logo from '../../assets/images/logo.png'
 
 import carrinho from '../../assets/images/carrinho.svg'
-import HeaderImg from '../HeaderImg'
 
 const Header = () => (
   <>

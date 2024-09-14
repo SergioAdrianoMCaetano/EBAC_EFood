@@ -1,17 +1,15 @@
 import { ProductContainer, List } from './styles'
-
 import { Container } from '../../styles'
-
-import Product from '../Product'
-import { Food } from '../../pages/Home'
+import CardapioItem from '../CardapioItem'
 import { useEffect, useState } from 'react'
+import { MenuItem, Categoria } from '../../types'
 
 export type Props = {
-  foods: Food[]
+  foods: MenuItem[] | Categoria[]
 }
 
 const ProductList = ({ foods }: Props) => {
-  const [destaquesDaSemana, setDestaquesDaSemana] = useState<Food[]>([])
+  const [destaquesDaSemana, setDestaquesDaSemana] = useState<MenuItem[]>([])
 
   const fetchDestaques = async () => {
     try {
@@ -33,15 +31,28 @@ const ProductList = ({ foods }: Props) => {
     <ProductContainer>
       <Container className="container">
         <List>
-          {foods.map((food) => (
-            <Product
-              key={food.id}
-              title={food.titulo}
-              category={food.tipo}
-              description={food.descricao}
-              image={food.capa}
-            />
-          ))}
+          {Array.isArray(foods) &&
+            foods.map((food) =>
+              'cardapio' in food ? (
+                food.cardapio.map((item) => (
+                  <CardapioItem
+                    key={item.id}
+                    id={item.id}
+                    nome={item.nome}
+                    descricao2={item.descricao2}
+                    foto={item.foto}
+                  />
+                ))
+              ) : (
+                <CardapioItem
+                  key={food.id}
+                  id={food.id}
+                  nome={food.nome}
+                  descricao2={food.descricao2}
+                  foto={food.foto}
+                />
+              )
+            )}
         </List>
       </Container>
     </ProductContainer>

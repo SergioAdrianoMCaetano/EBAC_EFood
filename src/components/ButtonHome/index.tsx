@@ -6,9 +6,10 @@ export type Props = {
   to?: string
   onClick?: () => void
   children: string
+  id?: number // Adicione a propriedade id
 }
 
-const ButtonHome = ({ type, title, to, onClick, children }: Props) => {
+const ButtonHome = ({ type, title, onClick, children, id }: Props) => {
   if (type === 'button') {
     return (
       <ButtonContainer type="button" title={title} onClick={onClick}>
@@ -18,7 +19,7 @@ const ButtonHome = ({ type, title, to, onClick, children }: Props) => {
   }
 
   return (
-    <ButtonLinkHome to={'/categorias'} title={title}>
+    <ButtonLinkHome to={`/restaurantes/${id}`} title={title}>
       {children}
     </ButtonLinkHome>
   )

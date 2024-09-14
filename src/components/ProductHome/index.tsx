@@ -8,18 +8,18 @@ import {
 } from './styles'
 
 import estrela from '../../assets/images/estrela.png'
-// import hiokiSushi from '../../assets/images/pratoSushi.png'
 import Tag from '../Tag'
 import ButtonHome from '../ButtonHome'
 
 type Props = {
+  id: number
   title: string
   description: string
   infos: string[]
   image: string
 }
 
-const ProductHome = ({ title, description, infos, image }: Props) => (
+const ProductHome = ({ id, title, description, infos, image }: Props) => (
   <CardContainer>
     <div className="container">
       <img src={image} alt={title} />
@@ -34,18 +34,18 @@ const ProductHome = ({ title, description, infos, image }: Props) => (
         <TituloHome>{title}</TituloHome>
         <ImgStar>
           <TituloHome>4.6</TituloHome>
-          <img src={estrela} />
+          <img src={estrela} alt="Estrela" />
         </ImgStar>
       </ImgH2>
       <Descricao>{description}</Descricao>
       <div className="container2">
         <ButtonHome
-          type={'link'}
-          title={'saiba mais'}
-          // eslint-disable-next-line react/no-children-prop
-          children={'Saiba mais'}
-          to="/"
-        />
+          type="link"
+          title="Saiba mais"
+          id={id} // Passando o id para o ButtonHome
+        >
+          Saiba mais
+        </ButtonHome>
       </div>
     </Card>
   </CardContainer>
