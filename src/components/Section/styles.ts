@@ -2,13 +2,14 @@ import styled from 'styled-components'
 import { Card } from '../ProductHome/styles'
 
 export const Container = styled.section`
-  padding: 32px 0;
-
-  ${Card}
+  ${Card} {
+    width: 380px;
+    height: 306px;
+  }
 
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 16px;
     max-width: 640px;
   }
 `

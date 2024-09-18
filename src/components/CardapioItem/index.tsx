@@ -1,16 +1,31 @@
 import React, { useState } from 'react'
-import { Card, Titulo, Descricao } from '../Product/styles'
+import {
+  Card,
+  Descricao,
+  ModalButton,
+  ModalDescription,
+  ModalImagem,
+  ModalService,
+  ModalTitle,
+  ModelContent
+} from '../Product/styles'
 import Modal from '../Modal'
-import ButtonHome from '../ButtonHome'
+import ButtonCardapio from '../ButtonCardapio'
+
+import {
+  DescricaoRestaurante,
+  ImagemRestaurante,
+  TituloRestaurante
+} from './styles'
 
 type CardapioItemProps = {
   id: number
   nome: string
-  descricao2: string
+  descricao: string
   foto: string
 }
 
-const CardapioItem = ({ id, nome, descricao2, foto }: CardapioItemProps) => {
+const CardapioItem = ({ id, nome, descricao, foto }: CardapioItemProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleOpenModal = () => {
@@ -21,25 +36,45 @@ const CardapioItem = ({ id, nome, descricao2, foto }: CardapioItemProps) => {
     setIsModalOpen(false)
   }
 
+  const getDescricao = (describe: string) => {
+    if (describe.length > 240) {
+      return describe.slice(0, 240) + '...'
+    }
+    return describe
+  }
+
   return (
     <>
       <Card>
         <div>
-          <img src={foto} alt={nome} className="main-image" />
+          <ImagemRestaurante src={foto} alt={nome} className="main-image" />
         </div>
-        <div>
-          <Titulo>{nome}</Titulo>
-          <Descricao>{descricao2}</Descricao>
+        <div className="container">
+          <TituloRestaurante>{nome}</TituloRestaurante>
+          <DescricaoRestaurante>{getDescricao(descricao)}</DescricaoRestaurante>
+          <ButtonCardapio
+            type="button"
+            title="Mais detalhes"
+            id={id}
+            onClick={handleOpenModal}
+          >
+            Mais detalhes
+          </ButtonCardapio>
         </div>
-        <ButtonHome type="link" title="Saiba mais" id={id}>
-          Saiba mais
-        </ButtonHome>
       </Card>
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <h2>{nome}</h2>
-        <p>{descricao2}</p>
-        <img src={foto} alt={nome} />
-      </Modal>
+      {isModalOpen && (
+        <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+          <ModelContent>
+            <ModalImagem src={foto} alt={nome} />
+            <div className="container">
+              <ModalTitle>{nome}</ModalTitle>
+              <ModalDescription>{descricao}</ModalDescription>
+              <ModalService>Serve: de 2 a 3 pessoas</ModalService>
+              <ModalButton>Adicionar ao carrinho - R$60,90</ModalButton>
+            </div>
+          </ModelContent>
+        </Modal>
+      )}
     </>
   )
 }

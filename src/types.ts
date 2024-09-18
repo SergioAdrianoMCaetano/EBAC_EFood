@@ -1,9 +1,11 @@
+import pratoPizza from './assets/images/pratoPizza.png'
+
 export type MenuItem = {
   foto: string
   preco: number
   id: number
   nome: string
-  descricao2: string
+  descricao: string
   porcao: string
 }
 

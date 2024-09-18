@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react'
+
 import { ProductContainer, List } from './styles'
 import { Container } from '../../styles'
 import CardapioItem from '../CardapioItem'
-import { useEffect, useState } from 'react'
 import { MenuItem, Categoria } from '../../types'
 
 export type Props = {
@@ -39,7 +40,7 @@ const ProductList = ({ foods }: Props) => {
                     key={item.id}
                     id={item.id}
                     nome={item.nome}
-                    descricao2={item.descricao2}
+                    descricao={item.descricao}
                     foto={item.foto}
                   />
                 ))
@@ -48,7 +49,7 @@ const ProductList = ({ foods }: Props) => {
                   key={food.id}
                   id={food.id}
                   nome={food.nome}
-                  descricao2={food.descricao2}
+                  descricao={food.descricao}
                   foto={food.foto}
                 />
               )

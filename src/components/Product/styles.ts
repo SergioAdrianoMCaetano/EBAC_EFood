@@ -88,7 +88,7 @@ export const Descricao = styled.p`
   text-align: left;
   margin-left: 8px;
   line-height: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
 
   @media (max-width: 435px) {
     font-size: 12px;

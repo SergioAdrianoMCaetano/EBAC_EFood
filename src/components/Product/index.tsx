@@ -14,12 +14,14 @@ import {
 
 export type Props = {
   title: string
+  nome: string
   category: string
   description: string
   image: string
+  id: number
 }
 
-const Product = ({ title, category, description, image }: Props) => {
+const Product = ({ title, id, description, image }: Props) => {
   const getDescricao = (describe: string) => {
     if (describe.length > 293) {
       return describe.slice(0, 290) + '...'
