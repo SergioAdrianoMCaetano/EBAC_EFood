@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const HeaderHome = () => (
   <>
     <HeaderBar>
-      <Link to="/categorias">
+      <Link to="/">
         <LogoImg src={logo} alt="eFood" />
       </Link>
       <TituloContainer>

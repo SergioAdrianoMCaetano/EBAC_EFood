@@ -8,8 +8,11 @@ import Section from '../../components/Section'
 
 import { MenuItem } from '../../types'
 
+// import { useGetRestaurantQuery } from '../../service/api'
+
 const Restaurantes = () => {
   const { id } = useParams()
+  // const { data: rest } = useGetRestaurantQuery(id!)
 
   const [restaurante, setRestaurante] = useState<{
     titulo: string
