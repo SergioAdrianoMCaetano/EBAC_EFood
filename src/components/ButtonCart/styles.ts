@@ -4,18 +4,20 @@ import { Link } from 'react-router-dom'
 
 import { cores } from '../../styles'
 
-export const ButtonRestaurante = styled.button`
-  width: 304px;
-  height: 24px;
+export const ButtonCarti = styled.button`
+  width: 334px;
+  height: 34px;
   background-color: ${cores.laranjaClarinho};
   color: ${cores.vermelhoSuave};
   border: none;
   border-radius: 4px;
   margin-left: 8px;
-  margin-right: 8px;
   margin-bottom: 10px;
   cursor: pointer;
-  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-right: 8px;
 
   @media (max-width: 768px) {
     width: 250px;
@@ -34,8 +36,8 @@ export const ButtonRestaurante = styled.button`
   }
 `
 
-export const ButtonLinkRestaurante = styled(Link)`
-  width: 304px;
+export const ButtonLinkCart = styled(Link)`
+  width: 100%;
   height: 24px;
   background-color: ${cores.laranjaClarinho};
   color: ${cores.vermelhoSuave};

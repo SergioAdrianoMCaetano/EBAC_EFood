@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {
   Card,
-  Descricao,
+  // Descricao,
   ModalButton,
   ModalDescription,
   ModalImagem,
@@ -17,6 +17,9 @@ import {
   ImagemRestaurante,
   TituloRestaurante
 } from './styles'
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
+import { Food } from '../../pages/Home'
 
 type CardapioItemProps = {
   id: number
@@ -41,6 +44,40 @@ const CardapioItem = ({ id, nome, descricao, foto }: CardapioItemProps) => {
       return describe.slice(0, 240) + '...'
     }
     return describe
+  }
+
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    // const foodItem: CardapioItemProps = {
+    //   id,
+    //   nome,
+    //   descricao,
+    //   foto
+    // }
+    const foodItem: Food = {
+      id,
+      titulo: nome,
+      destacado: false, // ou true, dependendo do seu caso
+      tipo: 'comida', // ou outro tipo relevante
+      avaliacao: 0, // ou a avaliação correta
+      descricao,
+      capa: foto,
+      infos: '',
+      cardapio: [
+        {
+          foto,
+          preco: 60.9, // ou o preço correto
+          id,
+          nome,
+          descricao2: descricao,
+          porcao: '2 a 3 pessoas' // ou a porção correta
+        }
+      ]
+    }
+
+    dispatch(add(foodItem))
+    dispatch(open())
   }
 
   return (
@@ -70,7 +107,9 @@ const CardapioItem = ({ id, nome, descricao, foto }: CardapioItemProps) => {
               <ModalTitle>{nome}</ModalTitle>
               <ModalDescription>{descricao}</ModalDescription>
               <ModalService>Serve: de 2 a 3 pessoas</ModalService>
-              <ModalButton>Adicionar ao carrinho - R$60,90</ModalButton>
+              <ModalButton onClick={addToCart}>
+                Adicionar ao carrinho - R$60,90
+              </ModalButton>
             </div>
           </ModelContent>
         </Modal>

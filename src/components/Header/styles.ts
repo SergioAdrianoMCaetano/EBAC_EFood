@@ -75,13 +75,14 @@ export const LogoImg = styled.img`
   }
 `
 
-export const LinkCart = styled.a`
+export const CartButton = styled.a`
   color: ${cores.vermelhoSuave};
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-left: 324px;
+  cursor: pointer;
 
   img {
     // background-color: ${cores.vermelhoSuave};

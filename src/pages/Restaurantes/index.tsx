@@ -30,7 +30,7 @@ const Restaurantes = () => {
   }, [id])
 
   if (!restaurante) {
-    return <h3>Carregando...</h3>
+    return <h3>Loading...</h3>
   }
 
   return (

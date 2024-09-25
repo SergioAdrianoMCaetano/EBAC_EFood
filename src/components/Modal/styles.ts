@@ -29,9 +29,9 @@ export const ModalContent = styled.div`
     align-items: left;
   }
 
-  @media (max-width: 425px) {
-    width: 100%;
-    height: auto;
+  @media (max-width: 435px) {
+    width: 50%;
+    height: 50%;
     padding: 16px;
   }
 
@@ -52,7 +52,7 @@ export const CloseButton = styled.button`
   font-size: 20px;
   cursor: pointer;
 
-  @media (max-width: 425px) {
+  @media (max-width: 435px) {
     top: 5px;
     right: 5px;
     font-size: 18px;

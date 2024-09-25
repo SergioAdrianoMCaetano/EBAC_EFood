@@ -7,6 +7,12 @@ export const cores = {
   vermelhoSuave: '#E66767'
 }
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px;',
+  mobile: '435px'
+}
+
 export const GlobalCSS = createGlobalStyle`
   * {
     margin: 0;
@@ -19,20 +25,24 @@ export const GlobalCSS = createGlobalStyle`
   body {
     background-color: ${cores.laranjaClarinho};
     color: ${cores.vermelhoSuave}
-    min-height: 100vh; 
+    min-height: 100vh;
   }
 `
 
 export const Container = styled.div`
-  max-width: 1024px;
+  max-width: 2560px;
   width: 100%;
   margin: 0 auto;
 
-  @media (max-width: 768px) {
+  // @media (max-width: ${breakpoints.desktop}) {
+  //   padding: 0px 15px;
+  // }
+
+  @media (max-width: ${breakpoints.tablet}) {
     padding: 0 15px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: ${breakpoints.mobile}) {
     padding 0 10px;
   }
 `

@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const ProductContainer = styled.section`
-  padding: 32px 0;
+  padding: 0px;
+  margin-left: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
