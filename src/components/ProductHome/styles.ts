@@ -30,9 +30,9 @@ export const CardContainer = styled.div`
   }
 
   @media (max-width: 425px) {
-    max-width: 75%;
+    max-width: 65%;
     height: 100%;
-    margin-left: 0;
+    margin-left: 30px;
     margin-right: 0;
 
     .tag {

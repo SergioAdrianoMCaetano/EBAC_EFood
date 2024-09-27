@@ -42,6 +42,12 @@ const ProductList = ({ foods }: Props) => {
                     nome={item.nome}
                     descricao={item.descricao}
                     foto={item.foto}
+                    preco={item.preco}
+                    porcao={item.porcao}
+                    avaliacao={0}
+                    destacado={false}
+                    tipo={''}
+                    cardapio={[]}
                   />
                 ))
               ) : (
@@ -51,6 +57,12 @@ const ProductList = ({ foods }: Props) => {
                   nome={food.nome}
                   descricao={food.descricao}
                   foto={food.foto}
+                  preco={0}
+                  avaliacao={0}
+                  destacado={false}
+                  porcao={''}
+                  tipo={''}
+                  cardapio={[]}
                 />
               )
             )}

@@ -35,11 +35,11 @@ export const Container = styled.div`
   margin: 0 auto;
 
   // @media (max-width: ${breakpoints.desktop}) {
-  //   padding: 0px 15px;
+  //   padding: 10px 15px;
   // }
 
   @media (max-width: ${breakpoints.tablet}) {
-    padding: 0 15px;
+    padding: 10px 15px;
   }
 
   @media (max-width: ${breakpoints.mobile}) {

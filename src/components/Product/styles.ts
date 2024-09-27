@@ -221,6 +221,13 @@ export const ModalButton = styled.button`
     font-size: 12px;
     padding: 4px;
   }
+
+  @media (max-width: 768px) {
+    width: 218px;
+    height: 24px;
+    font-size: 12px;
+    padding: 4px;
+  }
 `
 
 // export const Action = styled.div`

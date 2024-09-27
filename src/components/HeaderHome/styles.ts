@@ -15,6 +15,7 @@ export const HeaderBar = styled.div`
   justify-content: center;
 
   @media (max-width: 425px) {
+    width: 100%;
     padding: 16px;
   }
 `

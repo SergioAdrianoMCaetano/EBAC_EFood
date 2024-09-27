@@ -12,7 +12,7 @@ export const ImagemRestaurante = styled.img`
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    width: 378px;
+    width: 258px;
     height: 213px;
   }
 `

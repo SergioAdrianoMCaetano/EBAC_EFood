@@ -3,7 +3,7 @@ import HeaderImg from '../../components/HeaderImg'
 import ProductList from '../../components/ProductList'
 
 import pratoPizza from '../../assets/images/pratoPizza.png'
-import { Food } from '../Home'
+
 import { Categoria } from '../../types'
 
 const categorias: Categoria[] = [

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {
   Card,
-  // Descricao,
   ModalButton,
   ModalDescription,
   ModalImagem,
@@ -11,7 +10,6 @@ import {
 } from '../Product/styles'
 import Modal from '../Modal'
 import ButtonCardapio from '../ButtonCardapio'
-
 import {
   DescricaoRestaurante,
   ImagemRestaurante,
@@ -20,19 +18,36 @@ import {
 import { useDispatch } from 'react-redux'
 import { add, open } from '../../store/reducers/cart'
 import { Food } from '../../pages/Home'
+import { formataPreco } from '../Cart'
+import { useGetRestaurantQuery } from '../../service/api'
 
 type CardapioItemProps = {
   id: number
   nome: string
   descricao: string
   foto: string
+  preco: number
+  avaliacao: number
+  destacado: boolean
+  porcao: string
+  tipo: string
+  cardapio: []
 }
 
 const CardapioItem = ({ id, nome, descricao, foto }: CardapioItemProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const {
+    data: restaurante,
+    error,
+    isLoading,
+    refetch
+  } = useGetRestaurantQuery(id.toString())
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
+    if (!restaurante) {
+      refetch()
+    }
   }
 
   const handleCloseModal = () => {
@@ -49,35 +64,23 @@ const CardapioItem = ({ id, nome, descricao, foto }: CardapioItemProps) => {
   const dispatch = useDispatch()
 
   const addToCart = () => {
-    // const foodItem: CardapioItemProps = {
-    //   id,
-    //   nome,
-    //   descricao,
-    //   foto
-    // }
-    const foodItem: Food = {
-      id,
-      titulo: nome,
-      destacado: false, // ou true, dependendo do seu caso
-      tipo: 'comida', // ou outro tipo relevante
-      avaliacao: 0, // ou a avaliação correta
-      descricao,
-      capa: foto,
-      infos: '',
-      cardapio: [
-        {
-          foto,
-          preco: 60.9, // ou o preço correto
-          id,
-          nome,
-          descricao2: descricao,
-          porcao: '2 a 3 pessoas' // ou a porção correta
-        }
-      ]
-    }
+    if (restaurante) {
+      const foodItem: Food = {
+        id: restaurante.id,
+        titulo: restaurante.titulo,
+        preco: restaurante.preco,
+        destacado: restaurante.destacado,
+        tipo: restaurante.tipo,
+        avaliacao: restaurante.avaliacao,
+        descricao: restaurante.descricao,
+        capa: restaurante.capa,
+        infos: '',
+        cardapio: restaurante.cardapio
+      }
 
-    dispatch(add(foodItem))
-    dispatch(open())
+      dispatch(add(foodItem))
+      dispatch(open())
+    }
   }
 
   return (
@@ -101,17 +104,29 @@ const CardapioItem = ({ id, nome, descricao, foto }: CardapioItemProps) => {
       </Card>
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-          <ModelContent>
-            <ModalImagem src={foto} alt={nome} />
-            <div className="container">
-              <ModalTitle>{nome}</ModalTitle>
-              <ModalDescription>{descricao}</ModalDescription>
-              <ModalService>Serve: de 2 a 3 pessoas</ModalService>
-              <ModalButton onClick={addToCart}>
-                Adicionar ao carrinho - R$60,90
-              </ModalButton>
-            </div>
-          </ModelContent>
+          {isLoading ? (
+            <p>Carregando...</p>
+          ) : error ? (
+            <>
+              <p>Erro ao carregar dados.</p>
+              <pre>{JSON.stringify(error, null, 2)}</pre>
+            </>
+          ) : (
+            restaurante && (
+              <ModelContent>
+                <ModalImagem src={restaurante.capa} alt={restaurante.titulo} />
+                <div className="container">
+                  <ModalTitle>{restaurante.titulo}</ModalTitle>
+                  <ModalDescription>{restaurante.descricao}</ModalDescription>
+                  <ModalService>{restaurante.cardapio[0].porcao}</ModalService>
+                  <ModalButton onClick={addToCart}>
+                    Adicionar ao carrinho -{' '}
+                    {formataPreco(restaurante.cardapio[0].preco)}
+                  </ModalButton>
+                </div>
+              </ModelContent>
+            )
+          )}
         </Modal>
       )}
     </>

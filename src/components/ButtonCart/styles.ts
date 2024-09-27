@@ -29,7 +29,7 @@ export const ButtonCarti = styled.button`
 
   @media (max-width: 435px) {
     width: 200px;
-    height: 20px;
+    height: 34px;
     font-size: 12px;
     margin-left: 4px;
     margin-bottom: 6px;

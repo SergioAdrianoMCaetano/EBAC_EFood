@@ -19,6 +19,13 @@ import {
 import { RootReducer } from '../../store'
 import { close, remove } from '../../store/reducers/cart'
 
+export const formataPreco = (preco = 0) => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(preco)
+}
+
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
 
@@ -30,6 +37,12 @@ const Cart = () => {
 
   const removeItem = (id: number) => {
     dispatch(remove(id))
+  }
+
+  const getTotalPreco = () => {
+    return items.reduce((acumulador, item) => {
+      return acumulador + item.cardapio[0].preco
+    }, 0)
   }
 
   return (
@@ -44,7 +57,9 @@ const Cart = () => {
                   <ItemImg src={item.capa} alt={item.titulo} />
                   <ItemDetails>
                     <ItemTitulo>{item.titulo}</ItemTitulo>
-                    <ItemPreco>R$60,69</ItemPreco>
+                    <ItemPreco>
+                      {formataPreco(item.cardapio[0].preco)}
+                    </ItemPreco>
                   </ItemDetails>
                   <ImagLixeira onClick={() => removeItem(item.id)} />
                 </ListItem>
@@ -53,14 +68,14 @@ const Cart = () => {
           ))}
         </ul>
         <ItemDetails>
-          <Quantity>{items.length} prato(s) no carrinho</Quantity>
+          <Quantity>{items.length} prato(s) adicionados ao carrinho</Quantity>
           <div>
             <Prices>Valor total</Prices>
-            <Prices>R$250,00</Prices>
+            <Prices>{formataPreco(getTotalPreco())}</Prices>
           </div>
         </ItemDetails>
         <ButtonCart title="Continuar com a entrega" type="button">
-          Continuar com a entrega
+          <p>Continuar com a entrega</p>
         </ButtonCart>
       </Sidebar>
     </CartContainer>
