@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 import ButtonCart from '../ButtonCart'
 
@@ -28,8 +30,14 @@ export const formataPreco = (preco = 0) => {
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
-
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const location = useLocation()
+  const [previousUrl, setPreviousUrl] = useState('')
+
+  useEffect(() => {
+    setPreviousUrl(location.pathname)
+  }, [location.pathname])
 
   const closeCart = () => {
     dispatch(close())
@@ -43,6 +51,11 @@ const Cart = () => {
     return items.reduce((acumulador, item) => {
       return acumulador + item.cardapio[0].preco
     }, 0)
+  }
+
+  const handleContinueAndClose = () => {
+    closeCart()
+    navigate('/delivery', { state: { from: previousUrl } })
   }
 
   return (
@@ -74,7 +87,11 @@ const Cart = () => {
             <Prices>{formataPreco(getTotalPreco())}</Prices>
           </div>
         </ItemDetails>
-        <ButtonCart title="Continuar com a entrega" type="button">
+        <ButtonCart
+          title="Continuar com a entrega"
+          type="button"
+          onClick={handleContinueAndClose}
+        >
           <p>Continuar com a entrega</p>
         </ButtonCart>
       </Sidebar>

@@ -75,7 +75,8 @@ const CardapioItem = ({ id, nome, descricao, foto }: CardapioItemProps) => {
         descricao: restaurante.descricao,
         capa: restaurante.capa,
         infos: '',
-        cardapio: restaurante.cardapio
+        cardapio: restaurante.cardapio,
+        prices: undefined
       }
 
       dispatch(add(foodItem))

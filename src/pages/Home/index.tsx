@@ -6,6 +6,7 @@ import ProductListHome from '../../components/ProductListHome'
 import { useGetRestaurantesQuery } from '../../service/api'
 
 export type Food = {
+  prices: any
   preco: number
   id: number
   titulo: string

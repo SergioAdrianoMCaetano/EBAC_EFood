@@ -9,7 +9,7 @@ export type Props = {
   id?: number
 }
 
-const ButtonCart = ({ type, title, onClick, children, id }: Props) => {
+const ButtonDelivery = ({ type, title, onClick, children, id }: Props) => {
   if (type === 'button' || type === 'submit') {
     return (
       <ButtonCarti type="button" title={title} onClick={onClick}>
@@ -25,4 +25,4 @@ const ButtonCart = ({ type, title, onClick, children, id }: Props) => {
   )
 }
 
-export default ButtonCart
+export default ButtonDelivery
