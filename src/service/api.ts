@@ -7,7 +7,7 @@ type Product = {
 }
 
 type PurchasePayload = {
-  product: Product[]
+  products: Product[]
   delivery: {
     receiver: string
     address: {
@@ -33,7 +33,11 @@ type PurchasePayload = {
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://fake-api-tau.vercel.app/api/efood'
+    baseUrl: 'https://fake-api-tau.vercel.app/api/efood',
+    prepareHeaders: (headers) => {
+      headers.set('Content-Type', 'application/json')
+      return headers
+    }
   }),
   endpoints: (builder) => ({
     getHome: builder.query<Food, void>({

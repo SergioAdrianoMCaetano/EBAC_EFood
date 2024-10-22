@@ -85,7 +85,7 @@ const Payment = () => {
             }
           }
         },
-        product: [],
+        products: [],
         delivery: {
           receiver: '',
           address: {

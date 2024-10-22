@@ -55,7 +55,7 @@ const Cart = () => {
 
   const handleContinueAndClose = () => {
     closeCart()
-    navigate('/delivery', { state: { from: previousUrl } })
+    navigate('/entrega', { state: { from: previousUrl, items } })
   }
 
   return (

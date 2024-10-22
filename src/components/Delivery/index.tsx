@@ -87,7 +87,7 @@ const Delivery = () => {
             }
           }
         },
-        product: []
+        products: []
       })
     }
   })

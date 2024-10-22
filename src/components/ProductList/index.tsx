@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-
+import React from 'react'
 import { ProductContainer, List } from './styles'
 import { Container } from '../../styles'
 import CardapioItem from '../CardapioItem'
@@ -10,24 +9,6 @@ export type Props = {
 }
 
 const ProductList = ({ foods }: Props) => {
-  const [destaquesDaSemana, setDestaquesDaSemana] = useState<MenuItem[]>([])
-
-  const fetchDestaques = async () => {
-    try {
-      const response = await fetch(
-        'https://fake-api-tau.vercel.app/api/efood/restaurantes'
-      )
-      const data = await response.json()
-      setDestaquesDaSemana(data)
-    } catch (error) {
-      console.error('Erro ao buscar os destaques', error)
-    }
-  }
-
-  useEffect(() => {
-    fetchDestaques()
-  }, [])
-
   return (
     <ProductContainer>
       <Container className="container">

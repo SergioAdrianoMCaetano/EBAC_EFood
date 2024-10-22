@@ -23,7 +23,7 @@ const Restaurantes = () => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data) // Verifique os dados retornados
+        console.log(data)
         setRestaurante(data)
       })
       .catch((error) => console.error('Erro ao buscar os dados', error))
