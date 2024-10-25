@@ -25,7 +25,9 @@ const Finalizar = () => {
     <FinishContainer className={isOpen ? 'is-open' : ''}>
       <Overlay />
       <SideBarFinish>
-        <FinishTitle>Pedido Realizado - Nº {orderId}</FinishTitle>
+        <FinishTitle>
+          Pedido Realizado - Nº {deliveryDetails?.orderId}
+        </FinishTitle>
         <FinashContent>
           <p>
             Estamos felizes em informar que seu pedido já está em processo de
